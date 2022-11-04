@@ -31,8 +31,8 @@ $relname = "rel_runs_lines"
 az dt twin relationship create -n $dtname --relationship $relname --twin-id "FactoryFloor" --target "ProductionLine" --relationship-id "Floor run production lines"
 $relname = "rel_runs_steps"
 az dt twin relationship create -n $dtname --relationship $relname --twin-id "ProductionLine" --target "GrindingStep" --relationship-id "Floor run production lines"
-az dt twin relationship create -n $dtname --relationship $relname --twin-id "ProductionLine" --target "RoastingStep" --relationship-id "Floor run production lines"
-az dt twin relationship create -n $dtname --relationship $relname --twin-id "ProductionLine" --target "MoldingStep" --relationship-id "Floor run production lines"
+# az dt twin relationship create -n $dtname --relationship $relname --twin-id "ProductionLine" --target "RoastingStep" --relationship-id "Floor run production lines"
+# az dt twin relationship create -n $dtname --relationship $relname --twin-id "ProductionLine" --target "MoldingStep" --relationship-id "Floor run production lines"
 
 "factorymodelid = " + $factorymodelid | Out-File -FilePath $inoutfile -Append
 "floorymodelid = " + $floormodelid | Out-File -FilePath $inoutfile -Append
